@@ -1,0 +1,121 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Document Number: YOUR-DOC-NUMBER}
+\lhead{Your Document Title}
+\rfoot{\thepage}
+
+% Custom section formatting
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+{\LARGE \textbf{Algorithm Theoretical Baseline Document}}\\[1cm]
+{\Large Your Project or Algorithm Name}\\[0.5cm]
+Version: 1.0\\
+Date: \today\\[2cm]
+
+{\large Authors:}\\[0.5cm]
+Your Name\\
+Your Institute\\[2cm]
+
+{\large Document Number: YOUR-DOC-NUMBER}\\[1cm]
+\vfill
+{\small © Copyright Year, Your Institution}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\subsection{Observational Needs and Requirements}
+\subsubsection{Direct Radiative Effect of Aerosols}
+Your content here.
+
+\subsubsection{Indirect Aerosol Radiative Forcing}
+Your content here.
+
+\subsubsection{Requirements}
+Your content here. You can include tables:
+\begin{table}[h!]
+\centering
+\begin{tabular}{lccc}
+\toprule
+Property & Glory & GCOS & ACE \\
+\midrule
+AOD & Value & Value & Value \\
+SSA & Value & Value & Value \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy requirements on aerosol properties}
+\end{table}
+
+\subsection{Instrument Description}
+Your instrument details here.
+
+\subsection{Algorithm Overview}
+Brief description of your algorithm.
+
+\section{Algorithm Description}
+\subsection{Full-Physics Retrieval}
+\subsubsection{Forward Model}
+Description and equations.
+
+\subsubsection{Model Atmosphere and Optical Properties}
+Description and equations.
+
+\subsubsection{Surface Reflection Model}
+Description and equations.
+
+\subsubsection{Ocean Reflection Model}
+Description and equations.
+
+\subsection{Radiative Transfer Model}
+Description and equations.
+
+\subsection{Inversion Procedure}
+Detailed explanation.
+
+\section{Performance Analysis}
+Your analysis here.
+
+\section{Feasibility}
+Discussion on algorithm feasibility.
+
+\appendix
+\section{Additional Details}
+Additional technical details.
+
+\newpage
+\section*{Document Change Record}
+\begin{tabular}{lp{2cm}p{8cm}}
+\toprule
+Issue & Date & Comments \\
+\midrule
+1.0 & YYYY-MM-DD & Initial Release \\
+\bottomrule
+\end{tabular}
+
+\newpage
+\section*{References}
+\begin{thebibliography}{99}
+\bibitem{key} Author(s). \textit{Title}. Journal/Publisher, Year.
+\end{thebibliography}
+
+\end{document}
