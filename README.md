@@ -16,27 +16,34 @@ Authors: Meng Gao, Kirk Knobelspiesse, Pengwang Zhai, Kamal Aryal, Bryan Franz
 
 
 ## Data products
+PACE FastMAPOL polarimeter L2 products include four data groups:
+
+- geolocation_data
+- geophysical_data
+- diagnostic_data
+- sensor_band_parameters
+
 The HARP2 FastMAPOL L2 product suite includes a list of aerosol optical properties for both fine and coarse modes:
 
-Aerosol optical depth (aot and aot_fine/coarse)
-Aerosol single scattering albedo (ssa and ssa_fine/coarse)
-Ångström coefficient (angstrom_440_870 and angstrom_440_670)
-Aerosol fine mode optical depth fraction (fmf)
+- Aerosol optical depth (aot and aot_fine/coarse)
+- Aerosol single scattering albedo (ssa and ssa_fine/coarse)
+- Ångström coefficient (angstrom_440_870 and angstrom_440_670)
+- Aerosol fine mode optical depth fraction (fmf)
 
 As well as aerosol microphysical properties:
 
-Aerosol effective radius (reff_fine/coarse) and variance (veff_fine/coarse)
-Aerosol refractive index: real part (mr and mr_fine/coarse), imaginary part (mi and mi_fine/coarse)
-Aerosol spherical fraction (sph and sph_fine/coarse)
-Aerosol volume density (vd_fine/coarse)
-Aerosol fine mode volume fraction (fvf)
-Aerosol layer height (alh)
+- Aerosol effective radius (reff_fine/coarse) and variance (veff_fine/coarse)
+- Aerosol refractive index: real part (mr and mr_fine/coarse), imaginary part (mi and mi_fine/coarse)
+- Aerosol spherical fraction (sph and sph_fine/coarse)
+- Aerosol volume density (vd_fine/coarse)
+- Aerosol fine mode volume fraction (fvf)
+- Aerosol layer height (alh)
 
 And a set of other products:
 
-Wind speed (wind_speed)
-Chlorophyll-a (chla)
-Remote sensing reflectance (Rrs*)
+- Wind speed (wind_speed)
+- Chlorophyll-a (chla)
+- Remote sensing reflectance (Rrs*)
 
 The remote sensing reflectance characterizes ocean-leaving reflectance. It is derived via atmospheric correction based on the retrieved aerosol properties at all HARP2 viewing angles. Therefore, it includes an angle dimension, as in the L1C data. There are two versions of remote sensing reflectance: Rrs1 (before BRDF correction) and Rrs2 (after BRDF correction). Due to the large size of Rrs1 and Rrs2, they are optional outputs in the standard L2 file. Instead, their angular means and standard deviations are typically included as Rrs1_mean/std and Rrs2_mean/std.
 
