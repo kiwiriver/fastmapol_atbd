@@ -23,7 +23,7 @@ PACE FastMAPOL polarimeter L2 products include four data groups:
 - diagnostic_data
 - sensor_band_parameters
 
-The HARP2 FastMAPOL L2 product suite includes a list of aerosol optical properties for both fine and coarse modes:
+### The geophysical data group includes a list of aerosol optical properties for both fine and coarse modes:
 
 - Aerosol optical depth (aot and aot_fine/coarse)
 - Aerosol single scattering albedo (ssa and ssa_fine/coarse)
