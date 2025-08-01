@@ -23,7 +23,8 @@ PACE FastMAPOL polarimeter L2 products include four data groups:
 - diagnostic_data
 - sensor_band_parameters
 
-### The geophysical data group includes a list of aerosol optical properties for both fine and coarse modes:
+### geophysical_data group: aerosol and surface products
+FastMAPOL aerosol product suite includes a list of aerosol optical properties for both fine and coarse modes:
 
 - Aerosol optical depth (aot and aot_fine/coarse)
 - Aerosol single scattering albedo (ssa and ssa_fine/coarse)
@@ -46,6 +47,19 @@ And a set of other products:
 - Remote sensing reflectance (Rrs*)
 
 The remote sensing reflectance characterizes ocean-leaving reflectance. It is derived via atmospheric correction based on the retrieved aerosol properties at all HARP2 viewing angles. Therefore, it includes an angle dimension, as in the L1C data. There are two versions of remote sensing reflectance: Rrs1 (before BRDF correction) and Rrs2 (after BRDF correction). Due to the large size of Rrs1 and Rrs2, they are optional outputs in the standard L2 file. Instead, their angular means and standard deviations are typically included as Rrs1_mean/std and Rrs2_mean/std.
+
+### diagnostic_data: data quality evaluations
+Since the retrieval algorithm is based on optimal estimation by minimizing a $\chi^2$ cost function defined as the difference between measurement (m) and forward model fitting (f), normalized by total uncertainties ($\sigma$).
+
+$\chi^2 = \frac{1}{N} \sum (f - m)^2/\sigma^2$
+
+Here N is the total number of measureents used in retreival. The algorithm also adaptively evalue fitting performance, if the fitting perform poor, it will be removed from the retreival process. Therefore, the $\chi^2$ and $N$ can be used to evaluate retrieval performance, the pixels with small $\chi^2$ (good fitting) and large $N$ (more pixels can be fitted) will better quality. A more quantitatively approach based on error propogation can be also used to compute retrieval uncertainty, which will be include in future product.
+
+To support L3 data processing, a quality flag is also defined, which is usually based on $\chi^2$ and $N$. For the HARP2 test data, currently we choose
+- quality_flag = 0: when $\chi^2<1.5$ and $N_{ref}>60$ and $N_{DoLP}>60$
+- quality_flag = 1: when $\chi^2<1.5$ and $N_{ref}>40$ and $N_{DoLP}>40$
+- quality_flag > 1: for higher value $\chi^2$ and lower values of $N_{ref}$ and $N_{DoLP}$
+Quality flag will be updated with future L1 data calibration improvement.
 
 ## Performance Analysis
 ### Retrieval uncertainties
