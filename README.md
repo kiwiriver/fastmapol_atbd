@@ -24,14 +24,14 @@ PACE FastMAPOL polarimeter L2 products include four data groups:
 - sensor_band_parameters
 
 ### geophysical_data group: aerosol and surface products
-FastMAPOL aerosol product suite includes a list of aerosol optical properties for both fine and coarse modes:
+Aerosol optical properties for both fine and coarse modes:
 
 - Aerosol optical depth (aot and aot_fine/coarse)
 - Aerosol single scattering albedo (ssa and ssa_fine/coarse)
 - Ångström coefficient (angstrom_440_870 and angstrom_440_670)
 - Aerosol fine mode optical depth fraction (fmf)
 
-As well as aerosol microphysical properties:
+Aerosol microphysical properties:
 
 - Aerosol effective radius (reff_fine/coarse) and variance (veff_fine/coarse)
 - Aerosol refractive index: real part (mr and mr_fine/coarse), imaginary part (mi and mi_fine/coarse)
@@ -40,7 +40,7 @@ As well as aerosol microphysical properties:
 - Aerosol fine mode volume fraction (fvf)
 - Aerosol layer height (alh)
 
-And a set of other products:
+Surface and ocean products:
 
 - Wind speed (wind_speed)
 - Chlorophyll-a (chla)
