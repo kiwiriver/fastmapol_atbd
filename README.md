@@ -1,7 +1,7 @@
 <!---![FastMAPO Logo](img/fastmapol1.png)--->
 <img src="img/fastmapol1.png" alt="drawing" width="500"/>
 
-# FastMAPOL ATBD: Agorithm Theoretical Basis Document for the Fast Multi-Angle Polarimetric Ocean and Land algorithm
+# FastMAPOL ATBD in a Nutshell
 
 Authors: Meng Gao, Kirk Knobelspiesse, Pengwang Zhai, Kamal Aryal, Bryan Franz, Jeremy Werdell
 
